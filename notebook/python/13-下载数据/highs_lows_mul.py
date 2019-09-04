@@ -11,6 +11,7 @@ with open(filename) as f:
 
     dates, highs, lows = [], [], []
     for row in reader:
+        # 错误不退出，打印出错误日志
         try:
             current_date = datetime.strptime(row[0], "%Y-%m-%d")
             high = int(row[1])
